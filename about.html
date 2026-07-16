@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hello, World!</title>
+<title>About</title>
 <style>
   :root {
     --bg-1: #0f0c29;
@@ -35,6 +35,7 @@
     animation: gradientShift 15s ease infinite;
     overflow: hidden;
     position: relative;
+    padding: 6rem 1.5rem 2rem;
   }
 
   @keyframes gradientShift {
@@ -43,7 +44,6 @@
     100% { background-position: 0% 50%; }
   }
 
-  /* Floating particles */
   .particles {
     position: fixed;
     inset: 0;
@@ -70,84 +70,6 @@
       transform: translateY(-110vh) translateX(var(--drift, 40px)) scale(0.3);
       opacity: 0;
     }
-  }
-
-  .card {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 4rem 5rem;
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow:
-      0 8px 32px rgba(0, 0, 0, 0.4),
-      inset 0 1px 1px rgba(255, 255, 255, 0.15);
-    animation: floatCard 6s ease-in-out infinite;
-  }
-
-  @keyframes floatCard {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-14px); }
-  }
-
-  h1 {
-    font-size: clamp(2.8rem, 8vw, 5.5rem);
-    font-weight: 800;
-    letter-spacing: -1px;
-    background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent));
-    background-size: 300% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: shine 6s linear infinite;
-    text-shadow: 0 0 60px rgba(255, 110, 196, 0.35);
-  }
-
-  @keyframes shine {
-    to { background-position: 300% center; }
-  }
-
-  .subtitle {
-    margin-top: 1rem;
-    font-size: 1.15rem;
-    color: rgba(255, 255, 255, 0.7);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: 300;
-  }
-
-  .divider {
-    width: 80px;
-    height: 3px;
-    margin: 1.75rem auto;
-    border-radius: 999px;
-    background: linear-gradient(90deg, var(--accent), var(--accent-2));
-    box-shadow: 0 0 12px var(--accent);
-  }
-
-  .wave {
-    display: inline-block;
-    animation: wave 2.2s ease-in-out infinite;
-    transform-origin: 70% 70%;
-  }
-
-  @keyframes wave {
-    0%, 60%, 100% { transform: rotate(0deg); }
-    10% { transform: rotate(14deg); }
-    20% { transform: rotate(-8deg); }
-    30% { transform: rotate(14deg); }
-    40% { transform: rotate(-4deg); }
-    50% { transform: rotate(10deg); }
-  }
-
-  footer {
-    margin-top: 2rem;
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.35);
-    letter-spacing: 1px;
   }
 
   nav {
@@ -189,6 +111,87 @@
     background: linear-gradient(90deg, var(--accent), var(--accent-2));
     box-shadow: 0 0 16px rgba(255, 110, 196, 0.5);
   }
+
+  .card {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 640px;
+    padding: 4rem 3.5rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    animation: floatCard 6s ease-in-out infinite;
+  }
+
+  @keyframes floatCard {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-14px); }
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 6vw, 3.6rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent));
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 6s linear infinite;
+    text-shadow: 0 0 60px rgba(255, 110, 196, 0.35);
+  }
+
+  @keyframes shine {
+    to { background-position: 300% center; }
+  }
+
+  .divider {
+    width: 80px;
+    height: 3px;
+    margin: 1.75rem auto;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    box-shadow: 0 0 12px var(--accent);
+  }
+
+  p.body-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 300;
+    margin-bottom: 1.2rem;
+  }
+
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+    margin-top: 1.75rem;
+  }
+
+  .badge {
+    padding: 0.45rem 1.1rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  footer {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.35);
+    letter-spacing: 1px;
+  }
 </style>
 </head>
 <body>
@@ -196,15 +199,29 @@
   <div class="particles" id="particles"></div>
 
   <nav>
-    <a href="hello-world.html" class="active">Home</a>
-    <a href="about.html">About</a>
+    <a href="hello-world.html">Home</a>
+    <a href="about.html" class="active">About</a>
     <a href="contact.html">Contact</a>
   </nav>
 
   <div class="card">
-    <h1><span class="wave">👋</span> Hello, World!</h1>
+    <h1>✨ About This Page</h1>
     <div class="divider"></div>
-    <p class="subtitle">Welcome to something beautiful</p>
+    <p class="body-text">
+      This little corner of the internet started as a single "Hello, World!" —
+      the first line every developer writes — and grew into a small, self-contained
+      site built with nothing but HTML, CSS, and a sprinkle of JavaScript.
+    </p>
+    <p class="body-text">
+      No frameworks, no build step, no dependencies. Just a glowing gradient,
+      some floating particles, and a love of clean, fancy design.
+    </p>
+    <div class="badges">
+      <span class="badge">HTML5</span>
+      <span class="badge">CSS3</span>
+      <span class="badge">Vanilla JS</span>
+      <span class="badge">Zero Dependencies</span>
+    </div>
     <footer>crafted with HTML &amp; CSS</footer>
   </div>
 
